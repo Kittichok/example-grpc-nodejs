@@ -1,0 +1,23 @@
+syntax = "proto3";
+service ApiService {
+    rpc Test (Empty) returns (MockTestDataList) {}
+}
+message Empty {
+}
+message MockTestData{
+    string id = 1;
+    string name = 2;
+    string message = 3;
+}
+message MockTestDataList {
+   repeated MockTestData mockTestData = 1;
+}
+
+// message Note {
+//    string id = 1;
+//    string title = 2;
+//    string content = 3;
+// }
+// message NoteList {
+//    repeated Note notes = 1;
+// }
