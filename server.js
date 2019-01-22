@@ -9,6 +9,7 @@ var mock_data = [
 
 server.addService(notesProto.ApiService.service, {
     test: (_, callback) => {
+        console.log('service calling');
         callback(null, mock_data)
     },
 })
